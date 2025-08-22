@@ -1,20 +1,17 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+# 项目说明
 
-[project]
-name = "mcp_mysql"
-version = "0.1.0"
-description = "MCP MySQL Server"
-authors = [
-    { name = "Your Name" }
-]
-readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "pymysql",
-    "mcp[cli]"
-]
+本项目为 MCP MySQL Server，提供数据库知识和数据查询能力。
 
-[project.scripts]
-mcp-mysql = "mcp_mysql.__main__:main"
+- 主逻辑文件：mcp_mysql/server.py
+- 示例知识文件：knowledge.txt
+- 测试用例：tests/test_server.py
+
+安装依赖：
+```
+pip install pymysql
+```
+
+运行方式：
+```
+python -m mcp_mysql.server
+```
